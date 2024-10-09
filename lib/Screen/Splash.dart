@@ -40,7 +40,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
           children: [
             Image(
               image: AssetImage(
-                "MM.png",
+                "logo.png",
               ),
               width: 200,
               height: 600,

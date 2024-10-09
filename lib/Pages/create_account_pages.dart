@@ -140,7 +140,9 @@ class _accpageState extends State<accpage> {
                   child: const Text("Kasir"),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/user');
+                  },
                   child: const Text("Admin"),
                 ),
                 ElevatedButton(
@@ -158,7 +160,7 @@ class _accpageState extends State<accpage> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/user');
+                    Navigator.pushNamed(context, '/kasir');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
