@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wikusamakafe/Theme/color.dart';
 import 'package:wikusamakafe/models/coffe.dart';
 
 class CoffeTile extends StatelessWidget {
@@ -58,7 +59,7 @@ class CoffeTile extends StatelessWidget {
                       child: Container(
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                              color: Colors.orange,
+                              color: secondaryColor,
                               borderRadius: BorderRadius.circular(10)),
                           child: Icon(
                             Icons.add,

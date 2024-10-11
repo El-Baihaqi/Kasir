@@ -3,8 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:wikusamakafe/Component/button.dart';
 import 'package:wikusamakafe/Pages/Coffe_detail_page.dart';
 import 'package:wikusamakafe/Theme/color.dart';
-import 'package:wikusamakafe/models/cart.dart';
-import 'package:wikusamakafe/models/coffe.dart';
 import 'package:wikusamakafe/models/coffetile.dart';
 import 'package:wikusamakafe/models/shop.dart';
 
@@ -36,30 +34,40 @@ class _kasirState extends State<kasir> {
     final coffeMenu = shop.coffeMenu;
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 50, right: 15),
+        child: FloatingActionButton(
+          backgroundColor: secondaryColor,
+          child: const Icon(
+            Icons.shopping_cart_outlined,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, '/cart');
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.only(left: 25, top: 8, bottom: 8, right: 8),
+              padding: const EdgeInsets.only(
+                  left: 25, top: 100, bottom: 8, right: 8),
               child: Row(
                 children: [
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.black,
                           ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.black,
                           ),
                           borderRadius: BorderRadius.circular(20),
@@ -76,7 +84,7 @@ class _kasirState extends State<kasir> {
                       color: Colors.amber[800],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    margin: EdgeInsets.only(left: 8, right: 2),
+                    margin: const EdgeInsets.only(left: 8, right: 2),
                     padding: const EdgeInsets.all(8),
                     child: const Icon(
                       Icons.archive_outlined,
@@ -91,7 +99,7 @@ class _kasirState extends State<kasir> {
                       color: Colors.red[400],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    margin: EdgeInsets.only(left: 2, right: 25),
+                    margin: const EdgeInsets.only(left: 2, right: 25),
                     padding: const EdgeInsets.all(8),
                     child: const Icon(
                       Icons.arrow_circle_right_outlined,
@@ -104,14 +112,14 @@ class _kasirState extends State<kasir> {
             Container(
               decoration: BoxDecoration(
                   color: primaryColor, borderRadius: BorderRadius.circular(20)),
-              margin: EdgeInsets.only(left: 25, right: 25, top: 25),
-              padding: EdgeInsets.all(25),
+              margin: const EdgeInsets.only(left: 25, right: 25, top: 25),
+              padding:const  EdgeInsets.all(25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Coffe",
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
@@ -148,7 +156,7 @@ class _kasirState extends State<kasir> {
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: const Text("All Coffe"),
+                      child:  Text("All Coffe"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey,
                       ),
@@ -178,7 +186,7 @@ class _kasirState extends State<kasir> {
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: const Text("Americacno"),
+                      child: Text("Americacno"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey,
                       ),
@@ -204,7 +212,7 @@ class _kasirState extends State<kasir> {
               height: 10,
             ),
             ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 200),
+              constraints: const BoxConstraints(maxHeight: 200),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: ListView.builder(
@@ -221,7 +229,7 @@ class _kasirState extends State<kasir> {
               height: 20,
             ),
             ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 200),
+              constraints: const BoxConstraints(maxHeight: 200),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: ListView.builder(
@@ -244,7 +252,7 @@ class _kasirState extends State<kasir> {
               ),
               margin: const EdgeInsets.only(
                   left: 25, right: 25, top: 25, bottom: 25),
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -260,7 +268,7 @@ class _kasirState extends State<kasir> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "machiato",
                             style: TextStyle(fontSize: 18),
                           ),

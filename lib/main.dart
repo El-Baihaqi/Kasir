@@ -5,7 +5,6 @@ import 'package:wikusamakafe/Pages/admin.dart';
 import 'package:wikusamakafe/Pages/kasir.dart';
 import 'package:wikusamakafe/Pages/user.dart';
 import 'package:wikusamakafe/Screen/Splash.dart';
-import 'package:wikusamakafe/models/cart.dart';
 import 'package:wikusamakafe/models/shop.dart';
 
 void main() {
@@ -26,10 +25,10 @@ class Main extends StatelessWidget {
       home: Splash(),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/user': (context) => user(),
-        '/admin': (context) => Admin(),
-        '/kasir': (context) => kasir(),
-        '/cart': (context) => cartpage(),
+        '/user': (context) => const user(),
+        '/admin': (context) => const Admin(),
+        '/kasir': (context) => const kasir(),
+        '/cart': (context) => const CartPage(),
       },
     );
   }

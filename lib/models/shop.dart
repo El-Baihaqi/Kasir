@@ -39,9 +39,10 @@ class Shop extends ChangeNotifier {
   }
 
   //remove from cart
-  void RemovefromCart(coffe COFFE) {
-    _cart.remove(COFFE);
+  void removefromCart(coffe Coffe) {
+    _cart.remove(Coffe);
+    notifyListeners();
   }
-
-  notifyListeners();
 }
+
+void removefromCart(coffe coffe) {}
